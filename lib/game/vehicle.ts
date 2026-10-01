@@ -152,3 +152,35 @@ export function stepVehicle(
     const g = t.grip;
     const Fx = nx * f + tx * ft * g;
     const Fy = ny * f + ty * ft * g;
+    fx += Fx;
+    fy += Fy;
+    tq += off.x * Fy - off.y * Fx;
+    w.spin += ((pvx * tx + pvy * ty) / t.wheelRadius) * dt;
+  }
+
+  if (!v.grounded) {
+    if (input.brake) tq -= t.airTorque;
+    if (input.gas) tq += t.airTorque;
+  }
+  v.engineOn = input.gas ? 1 : Math.max(v.engineOn - dt * 4, 0);
+
+  v.vx += (fx / t.mass) * dt;
+  v.vy += (fy / t.mass) * dt;
+  v.av += (tq / t.inertia) * dt;
+  v.av *= 0.995;
+  v.x += v.vx * dt;
+  v.y += v.vy * dt;
+
+  const prev = v.angle;
+  v.angle += v.av * dt;
+  const d = wrapPi(v.angle - prev);
+  v.pendingFlips += d;
+
+  if (!v.grounded) {
+    v.airborneTime += dt;
+  } else {
+    if (v.airborneTime > 0.15) ev.airtimeLanded = v.airborneTime;
+    ev.flipsCompleted = Math.floor(Math.abs(v.pendingFlips) / (Math.PI * 2));
+    v.airborneTime = 0;
+    v.pendingFlips = 0;
+  }
