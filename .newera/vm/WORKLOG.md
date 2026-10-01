@@ -46,3 +46,10 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-10-01T12:45:37.104Z | VM 1/3] step 47 shell ok [tools so far: 37]: 102 lib/game/vehicle.ts
 - [2026-10-01T12:45:45.285Z | VM 1/3] step 48 append_file ok [tools so far: 38]: appended 6 lines to lib/game/vehicle.ts (now 108 lines, 2517 chars)
 - [2026-10-01T12:46:06.869Z | VM 1/3] step 51 append_file ok [tools so far: 39]: appended 7 lines to lib/game/vehicle.ts (now 114 lines, 2616 chars)
+- [2026-10-01T12:46:26.276Z | VM 1/3] step 53 append_file ok [tools so far: 40]: appended 2 lines to lib/game/vehicle.ts (now 115 lines, 2726 chars)
+- [2026-10-01T12:46:34.302Z | VM 1/3] step 54 shell ok [tools so far: 41]: dt: number ): StepEvents {   const t = v.tuning;   const ev: StepEvents = { flipsCompleted: 0, airtimeLanded: 0, crashed: fals…(56 chars)
+- [2026-10-01T12:46:43.632Z | VM 1/3] step 55 shell ok [tools so far: 42]: dt: number ): StepEvents {
+- [2026-10-01T12:46:50.148Z | VM 1/3] step 56 append_file ok [tools so far: 43]: appended 7 lines to lib/game/vehicle.ts (now 120 lines, 2735 chars)
+- [2026-10-01T12:46:55.171Z | VM 1/3] step 57 shell ok [tools so far: 44]: dt: number ): StepEvents {   const t = v.tuning;   const ev: StepEvents = {     flipsCompleted: 0,     airtimeLanded: 0,     crashed: false,   };
+- [2026-10-01T12:47:01.436Z | VM 1/3] step 58 append_file ok [tools so far: 45]: appended 7 lines to lib/game/vehicle.ts (now 126 lines, 2854 chars)
+- [2026-10-01T12:47:07.950Z | VM 1/3] step 59 shell ok [tools so far: 46]: if (v.crashed) {     v.crashTimer += dt;

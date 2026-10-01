@@ -111,3 +111,11 @@ export function stepVehicle(
   input: InputState,
   dt: number
 ): StepEvents {
+  const t = v.tuning;
+  const ev: StepEvents = {
+    flipsCompleted: 0,
+    airtimeLanded: 0,
+    crashed: false,
+  };
+  if (v.crashed) {
+    v.crashTimer += dt;
