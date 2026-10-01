@@ -4,7 +4,7 @@
 hill-climb-racer
 **Normalized interpretation:** yes public; hill-climb-racer
 **Execution profile:** fast
-**Created:** 2026-10-01T12:08:00.245Z
+**Created:** 2026-10-01T12:55:16.590Z
 
 ## Requirements
 
@@ -14,7 +14,6 @@ hill-climb-racer
 | REQ-002 | hill-climb-racer | YES | pending | — | Concrete implementation evidence is recorded and the outcome matches the user request. |
 
 ## Feature Matrix
-- yes public
-- hill-climb-racer
+- hill-climb
 
 ## Completion: 0/2 mandatory requirements have evidence

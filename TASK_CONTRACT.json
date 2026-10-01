@@ -9,7 +9,6 @@
       "description": "yes public",
       "mandatory": true,
       "status": "pending",
-      "evidenceType": "custom",
       "acceptanceCriteria": "Concrete implementation evidence is recorded and the outcome matches the user request."
     },
     {
@@ -17,13 +16,11 @@
       "description": "hill-climb-racer",
       "mandatory": true,
       "status": "pending",
-      "evidenceType": "custom",
       "acceptanceCriteria": "Concrete implementation evidence is recorded and the outcome matches the user request."
     }
   ],
   "featureMatrix": [
-    "yes public",
-    "hill-climb-racer"
+    "hill-climb"
   ],
   "contentMatrix": [],
   "assetManifest": [],
@@ -33,6 +30,6 @@
   "platformRequirements": [],
   "permissions": [],
   "deferredItems": [],
-  "createdAt": 1790856480245,
-  "updatedAt": 1790856480246
+  "createdAt": 1790859316590,
+  "updatedAt": 1790859954384
 }
