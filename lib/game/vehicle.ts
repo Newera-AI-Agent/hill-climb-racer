@@ -92,3 +92,13 @@ function rot(v: Vec2, a: number): Vec2 {
   const s = Math.sin(a);
   return { x: v.x * c - v.y * s, y: v.x * s + v.y * c };
 }
+
+export interface StepEvents {
+  flipsCompleted: number;
+  airtimeLanded: number;
+  crashed: boolean;
+}
+
+const wrapPi = (a:…(787 chars)
+
+function wrapPi(a: number): number { …(555 chars)

@@ -25,3 +25,9 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-10-01T12:29:15.203Z | VM 1/3] step 21 write_file ok [tools so far: 18]: wrote lib/game/vehicle.ts (3 lines)
 - [2026-10-01T12:32:29.532Z | VM 1/3] step 22 shell ok [tools so far: 19]: 94 lib/game/vehicle.ts
 - [2026-10-01T12:36:22.890Z | VM 1/3] step 26 shell ok [tools so far: 20]: import { heightAt, slopeAt } from './terrain'; import type { CarColor, InputState, Vec2 } from './types'; export interface VehicleTuning {   mass: number;   inertia: number;   engineForce: number;   
+- [2026-10-01T12:36:49.129Z | VM 1/3] step 28 shell FAILED [tools so far: 21]: REFUSED: this command looks TRUNCATED - the heredoc marker TSEOF is never closed, so bash would write a HALF FILE and warn "here-document delimited by end-of-file". Your reply was probably cut off by 
+- [2026-10-01T12:36:57.627Z | VM 1/3] step 29 append_file ok [tools so far: 22]: appended 8 lines to lib/game/vehicle.ts (now 102 lines, 2405 chars)
+- [2026-10-01T12:37:05.844Z | VM 1/3] step 30 shell ok [tools so far: 23]: return { x: v.x * c - v.y * s, y: v.x * s + v.y * c }; } export interface StepEvents {   flipsCompleted: number;   airtimeLanded: number;   crashed: boolean; } const wrapPi = (a:…(787 chars)
+- [2026-10-01T12:37:15.709Z | VM 1/3] step 31 append_file ok [tools so far: 24]: appended 2 lines to lib/game/vehicle.ts (now 104 lines, 2456 chars)
+- [2026-10-01T12:40:22.072Z | VM 1/3] sub-agent game-ui finished (126s): ### game-ui FAILED (protocol violations x3).
+- [2026-10-01T12:43:18.715Z | VM 1/3] sub-agent game-engine finished (304s): ### game-engine FAILED (protocol violations x3).
