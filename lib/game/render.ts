@@ -92,3 +92,42 @@ export function renderScene(
     const sy = toY(f.y);
     ctx.fillStyle = '#d62828';
     ctx.fillRect(sx - 8, sy - 16, 16, 16);
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 12px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('F', sx, sy - 8);
+  }
+  for (const wk of lv.wreckedCars) {
+    const sx = toX(wk.x);
+    if (sx < -60 || sx > w + 60) continue;
+    const sy = toY(wk.y);
+    ctx.save();
+    ctx.translate(sx, sy);
+    ctx.rotate(-0.15);
+    ctx.fillStyle = '#3d3d3d';
+    ctx.fillRect(-20, -18, 40, 18);
+    ctx.fillStyle = '#222';
+    ctx.beginPath(); ctx.arc(-12, 0, 7, 0, 7); ctx.fill();
+    ctx.beginPath(); ctx.arc(12, 0, 7, 0, 7); ctx.fill();
+    ctx.restore();
+  }
+  for (const cr of lv.creatures) {
+    const sx = toX(cr.x);
+    if (sx < -40 || sx > w + 40) continue;
+    const sy = toY(cr.y);
+    ctx.fillStyle = cr.alive ? '#3b2f2f' : '#5a4444';
+    ctx.beginPath();
+    ctx.ellipse(sx, sy - 8, 9, cr.alive ? 8 : 4, 0, 0, Math.PI * 2);
+    ctx.fill();
+    if (cr.alive) {
+      ctx.fillStyle = '#ffd23f';
+      ctx.beginPath(); ctx.arc(sx - 3, sy - 10, 2, 0, 7); ctx.fill();
+      ctx.beginPath(); ctx.arc(sx + 3, sy - 10, 2, 0, 7); ctx.fill();
+    }
+  }
+  const flag = (x: number, y: number) => {
+    ctx.fillStyle = '#333';
+    ctx.fillRect(x - 1, y - 34, 2, 34);
+    ctx.fillStyle = '#e63946';
+    ctx.beginPath();
