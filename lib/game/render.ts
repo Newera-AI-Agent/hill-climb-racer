@@ -26,3 +26,31 @@ function cloudsNear(camX: number): Cloud[] {
   }
   return out;
 }
+export interface Scene {
+  cam: Camera;
+  height: (x: number) => number;
+  pickups: Pickup[];
+  car: VehicleState;
+  time: number;
+}
+
+export function drawScene(
+  ctx: CanvasRenderingContext2D,
+  W: number,
+  H: number,
+  s: Scene
+){
+  const sky = ctx.createLinearGradient(0, 0, 0, H);
+  sky.addColorStop(0, '#5ab0f0');
+  sky.addColorStop(0.55, '#a9d9f7');
+  sky.addColorStop(1, '#e8f6fd');
+  ctx.fillStyle = sky;
+  ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = '#ffe46b';
+  ctx.beginPath();
+  ctx.arc(W - 90, 78, 40, 0, Math.PI * 2);
+  ctx.fill();
+}
+function drawClouds(ctx: CanvasRenderingContext2D, camX: number, H: number) {
+  ctx.fillStyle = 'rgba(255,255,255,0.9)';
+  for (const c of cloudsNear(cam…(445 chars)
