@@ -31,3 +31,5 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-10-01T12:37:15.709Z | VM 1/3] step 31 append_file ok [tools so far: 24]: appended 2 lines to lib/game/vehicle.ts (now 104 lines, 2456 chars)
 - [2026-10-01T12:40:22.072Z | VM 1/3] sub-agent game-ui finished (126s): ### game-ui FAILED (protocol violations x3).
 - [2026-10-01T12:43:18.715Z | VM 1/3] sub-agent game-engine finished (304s): ### game-engine FAILED (protocol violations x3).
+- [2026-10-01T12:43:20.836Z | VM 1/3] step 33 spawn_agents ok [tools so far: 25]: SUB-AGENTS REPORT: ### game-engine FAILED (protocol violations x3). ### game-ui FAILED (protocol violations x3). Each agent summary above is authoritative for its slice. Verify their claims with yo
+- [2026-10-01T12:43:29.771Z | VM 1/3] step 34 shell ok [tools so far: 26]: 102:const wrapPi = (a:…(787 chars) 104:function wrapPi(a: number): number { …(555 chars)
