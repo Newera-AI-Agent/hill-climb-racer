@@ -47,3 +47,27 @@ export class InputManager {
     window.removeEventListener('keyup', this.onUp);
     this.bound = false;
   }
+
+  poll(): InputState {
+    const has = (a: InputAction) =>
+      this.held.has(a) || this.touch.has(a) || this.pressed.has(a);
+    return {
+      gas: has('gas'), brake: has('brake'),
+      tiltLeft: has('tiltLeft'), tiltRight: has('tiltRight'),
+      restart: has('restart'), pause: has('pause'),
+      mute: has('mute'), confirm: has('confirm'),
+    };
+  }
+
+  consume(a: InputAction): boolean {
+    if (this.pressed.has(a)) { this.pressed.delete(a); return true; }
+    return false;
+  }
+
+  setTouch(a: InputAction, down: boolean): void {
+    if (EDGE.includes(a)) {
+      if (down) this.pressed.add(a);
+    } else if (down) this.touch.add(a);
+    else this.touch.delete(a);
+  }
+}
