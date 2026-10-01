@@ -181,3 +181,5 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-10-01T13:43:41.730Z | VM 1/3] step 30 append_file ok [tools so far: 29]: appended 11 lines to lib/game/render.ts (now 97 lines, 2387 chars)
 - [2026-10-01T13:45:02.620Z | VM 1/3] VERIFIED green: npm install 2>&1 | tail -3 && npm run build 2>&1 | tail -40
 - [2026-10-01T13:45:02.621Z | VM 1/3] step 32 shell ok [tools so far: 30]: npm warn install-scripts   unrs-resolver@1.12.2 (postinstall: node postinstall.js) npm warn install-scripts npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts app
+- [2026-10-01T13:46:11.104Z | VM 1/3] FINAL report: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- [2026-10-01T13:46:11.105Z | VM 1/3] deploy self-heal: patching next.config for static export and rebuilding
