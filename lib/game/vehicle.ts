@@ -117,5 +117,38 @@ export function stepVehicle(
     airtimeLanded: 0,
     crashed: false,
   };
-  if (v.crashed) {
-    v.crashTimer += dt;
+
+  let fx = 0;
+  let fy = t.gravity * t.mass;
+  let tq = 0;
+  v.grounded = false;
+
+  for (const w of v.wheels) {
+    const off = rot(w.offset, v.angle);
+    const wx = v.x + off.x;
+    const wy = v.y + off.y;
+    const reach = t.suspensionTravel + t.wheelRadius;
+    const gy = heightAt(wx);
+    const drop = gy - wy;
+    w.grounded = drop <= reach;
+    if (!w.grounded) { w.compression = 0; continue; }
+    v.grounded = true;
+    const comp = Math.min(Math.max(reach - drop, 0), reach);
+    w.compression = comp / t.suspensionTravel;
+    const s = slopeAt(wx);
+    const nl = Math.hypot(s, 1);
+    const nx = -s / nl;
+    const ny = -1 / nl;
+    const tx = 1 / nl;
+    const ty = s / nl;
+    const pvx = v.vx - v.av * off.y;
+    const pvy = v.vy + v.av * off.x;
+    const vn = pvx * nx + pvy * ny;
+    const spring = t.suspensionK * comp - t.suspensionDamp * vn;
+    const f = Math.max(spring, 0);
+    let ft = 0;
+    if (input.gas) ft += t.engineForce;
+    if (input.brake) ft -= Math.sign(pvx * tx) * t.brakeForce;
+    const g = t.grip;
+    const Fx = nx * f + tx * ft * g;
+    const Fy = ny * f + ty * ft * g;
