@@ -20,3 +20,8 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-10-01T12:26:45.095Z | VM 1/3] step 15 write_file ok [tools so far: 13]: wrote lib/game/types.ts (71 lines)
 - [2026-10-01T12:28:11.983Z | VM 1/3] step 17 write_file ok [tools so far: 14]: wrote lib/game/terrain.ts (97 lines)
 - [2026-10-01T12:28:24.000Z | VM 1/3] step 18 write_file ok [tools so far: 15]: wrote lib/game/vehicle.ts (3 lines)
+- [2026-10-01T12:28:40.462Z | VM 1/3] step 19 write_file ok [tools so far: 16]: wrote lib/game/vehicle.ts (3 lines)
+- [2026-10-01T12:28:55.528Z | VM 1/3] step 20 read_file ok [tools so far: 17]: lib/game/vehicle.ts [lines 1-3 of 3] 1: // Compact 2D rigid-body vehicle: a chassis with two spring-suspended wheels. 2: // Wheels are ray-cast suspension points against the terrain height field; 3: /
+- [2026-10-01T12:29:15.203Z | VM 1/3] step 21 write_file ok [tools so far: 18]: wrote lib/game/vehicle.ts (3 lines)
+- [2026-10-01T12:32:29.532Z | VM 1/3] step 22 shell ok [tools so far: 19]: 94 lib/game/vehicle.ts
+- [2026-10-01T12:36:22.890Z | VM 1/3] step 26 shell ok [tools so far: 20]: import { heightAt, slopeAt } from './terrain'; import type { CarColor, InputState, Vec2 } from './types'; export interface VehicleTuning {   mass: number;   inertia: number;   engineForce: number;   
