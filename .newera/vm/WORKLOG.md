@@ -74,3 +74,9 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-10-01T12:51:40.991Z | VM 1/3] step 82 append_file ok [tools so far: 65]: appended 3 lines to lib/game/vehicle.ts (now 212 lines, 5288 chars)
 - [2026-10-01T12:51:49.298Z | VM 1/3] VERIFIED green: npx tsc --noEmit --strict lib/*.ts lib/game/*.ts 2>&1 | head -20
 - [2026-10-01T12:51:49.299Z | VM 1/3] step 83 shell ok [tools so far: 66]: lib/game/vehicle.ts(212,1): error TS1005: '}' expected.
+- [2026-10-01T12:51:57.327Z | VM 1/3] step 84 shell ok [tools so far: 67]: 32 31
+- [2026-10-01T12:52:19.567Z | VM 1/3] step 86 shell ok [tools so far: 68]: if (input.gas) ft += t.engineForce;     if (input.brake) ft -= Math.sign(pvx * tx) * t.brakeForce;     const g = t.grip;     const Fx = nx * f + tx * ft * g;     const Fy = ny * f + ty * ft * g;     f
+- [2026-10-01T12:52:35.479Z | VM 1/3] step 87 shell ok [tools so far: 69]: pendingFlips: number;   lastFlipBucket: number;   crashed: boolean;   crashTimer: number;   engineOn: number; // 0..1 for sound/render   color: CarColor;   tuning: VehicleTuning; } export function cr
+- [2026-10-01T12:52:43.556Z | VM 1/3] step 88 shell ok [tools so far: 70]: v.pendingFlips = 0;   }   const hw = t.chassisHalfW;   const hh = t.chassisHalfH;   let roofHit = false;   let bodyHit = false;   const corners: Vec2[] = [     { x: -hw, y: -hh }, { x: hw, y: -hh }, 
+- [2026-10-01T12:53:50.447Z | VM 1/3] step 90 shell ok [tools so far: 71]: airtimeLanded: number;   crashed: boolean; } function wrapPi(a: number): number { function wrapPi(a: number) {   const t = Math.PI * 2;   return ((a % t) + t + Math.PI) % t - Math.PI; } export func
+- [2026-10-01T12:54:11.991Z | VM 1/3] step 92 edit_file ok [tools so far: 72]: patched lib/game/vehicle.ts (1 occurrence(s) replaced)
