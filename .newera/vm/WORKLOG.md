@@ -92,3 +92,5 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-10-01T12:56:23.760Z | VM 1/3] sub-agent agent-1 finished (0s): ### agent-1 FAILED: no task text given.
 - [2026-10-01T12:56:24.534Z | VM 1/3] sub-agent agent-2 finished (0s): ### agent-2 FAILED: no task text given.
 - [2026-10-01T12:56:25.241Z | VM 1/3] sub-agent agent-3 finished (0s): ### agent-3 FAILED: no task text given.
+- [2026-10-01T12:56:28.109Z | VM 1/3] step 103 spawn_agents ok [tools so far: 81]: SUB-AGENTS REPORT: ### agent-1 FAILED: no task text given. ### agent-2 FAILED: no task text given. ### agent-3 FAILED: no task text given. Each agent summary above is authoritative for its slice. 
+- [2026-10-01T12:56:51.936Z | VM 1/3] sub-agent agent-1 finished (0s): ### agent-1 FAILED: no task text given.
