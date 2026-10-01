@@ -1,0 +1,38 @@
+{
+  "originalRequest": "yes public\nhill-climb-racer",
+  "normalizedInterpretation": "yes public; hill-climb-racer",
+  "assumptions": [],
+  "profile": "fast",
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "description": "yes public",
+      "mandatory": true,
+      "status": "pending",
+      "evidenceType": "custom",
+      "acceptanceCriteria": "Concrete implementation evidence is recorded and the outcome matches the user request."
+    },
+    {
+      "id": "REQ-002",
+      "description": "hill-climb-racer",
+      "mandatory": true,
+      "status": "pending",
+      "evidenceType": "custom",
+      "acceptanceCriteria": "Concrete implementation evidence is recorded and the outcome matches the user request."
+    }
+  ],
+  "featureMatrix": [
+    "yes public",
+    "hill-climb-racer"
+  ],
+  "contentMatrix": [],
+  "assetManifest": [],
+  "audioManifest": [],
+  "testMatrix": [],
+  "artifactMatrix": [],
+  "platformRequirements": [],
+  "permissions": [],
+  "deferredItems": [],
+  "createdAt": 1790856480245,
+  "updatedAt": 1790856480246
+}
