@@ -121,3 +121,10 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-10-01T13:01:50.447Z | VM 1/3] step 131 append_file ok [tools so far: 105]: appended 9 lines to lib/game/render.ts (now 46 lines, 1678 chars)
 - [2026-10-01T13:02:02.935Z | VM 1/3] step 132 append_file ok [tools so far: 106]: appended 12 lines to lib/game/render.ts (now 57 lines, 2005 chars)
 - [2026-10-01T13:02:09.381Z | VM 1/3] step 133 shell ok [tools so far: 107]: ctx.lineTo(w, h);     ctx.closePath();     ctx.fill();   };   hills(0.3, p.far, 6);   hills(0.55, p.mid, 3);
+- [2026-10-01T13:02:20.834Z | VM 1/3] step 134 shell ok [tools so far: 108]: ctx.beginPath();     ctx.moveTo(0, h);     for (let sx = 0; sx <= w; sx += 24) {       const wx = cam.x * par + (sx - w / 2) / cam.zoom;       const y = heightAt(wx) - base * lv.baseAmplitude;       c
+- [2026-10-01T13:02:42.576Z | VM 1/3] step 136 append_file ok [tools so far: 109]: appended 7 lines to lib/game/render.ts (now 63 lines, 2197 chars)
+- [2026-10-01T13:02:51.828Z | VM 1/3] step 137 append_file ok [tools so far: 110]: appended 7 lines to lib/game/render.ts (now 69 lines, 2424 chars)
+- [2026-10-01T13:03:05.301Z | VM 1/3] step 138 append_file ok [tools so far: 111]: appended 9 lines to lib/game/render.ts (now 77 lines, 2660 chars)
+- [2026-10-01T13:03:23.176Z | VM 1/3] step 139 append_file ok [tools so far: 112]: appended 6 lines to lib/game/render.ts (now 82 lines, 2872 chars)
+- [2026-10-01T13:03:34.185Z | VM 1/3] step 140 append_file ok [tools so far: 113]: appended 8 lines to lib/game/render.ts (now 89 lines, 3082 chars)
+- [2026-10-01T13:03:47.208Z | VM 1/3] step 141 append_file ok [tools so far: 114]: appended 7 lines to lib/game/render.ts (now 95 lines, 3282 chars)

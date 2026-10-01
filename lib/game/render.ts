@@ -54,3 +54,41 @@ export function renderScene(
   };
   hills(0.3, p.far, 6);
   hills(0.55, p.mid, 3);
+
+  const toX = (wx: number) => (wx - cam.x) * cam.zoom + w / 2;
+  const toY = (wy: number) => (wy - cam.y) * cam.zoom + h / 2;
+  ctx.fillStyle = p.dirt;
+  ctx.beginPath();
+  ctx.moveTo(0, h);
+  const x0 = cam.x - w / 2 / cam.zoom - 50;
+  const x1 = cam.x + w / 2 / cam.zoom + 50;
+  for (let wx = x0; wx <= x1; wx += 16) {
+    ctx.lineTo(toX(wx), toY(heightAt(wx)));
+  }
+  ctx.lineTo(w, h); ctx.closePath(); ctx.fill();
+  ctx.strokeStyle = p.grass;
+  ctx.lineWidth = 5;
+  ctx.beginPath();
+  for (let wx = x0; wx <= x1; wx += 16) {
+    const sx = toX(wx), sy = toY(heightAt(wx));
+    wx === x0 ? ctx.moveTo(sx, sy) : ctx.lineTo(sx, sy);
+  }
+  ctx.stroke();
+  const bob = Math.sin(tNow / 300) * 3;
+  for (const c of lv.coins) {
+    const sx = toX(c.x), sy = toY(c.y) + bob;
+    if (sx < -40 || sx > w + 40) continue;
+    const sq = Math.abs(Math.sin(tNow / 200 + c.x));
+    ctx.fillStyle = '#ffd23f';
+    ctx.strokeStyle = '#d4a017';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.ellipse(sx, sy, Math.max(2, 8 * sq), 8, 0, 0, Math.PI * 2);
+    ctx.fill(); ctx.stroke();
+  }
+  for (const f of lv.fuelCans) {
+    const sx = toX(f.x);
+    if (sx < -40 || sx > w + 40) continue;
+    const sy = toY(f.y);
+    ctx.fillStyle = '#d62828';
+    ctx.fillRect(sx - 8, sy - 16, 16, 16);
