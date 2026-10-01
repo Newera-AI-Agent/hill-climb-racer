@@ -184,3 +184,28 @@ export function stepVehicle(
     v.airborneTime = 0;
     v.pendingFlips = 0;
   }
+
+  const hw = t.chassisHalfW;
+  const hh = t.chassisHalfH;
+  let roofHit = false;
+  let bodyHit = false;
+  const corners: Vec2[] = [
+    { x: -hw, y: -hh }, { x: hw, y: -hh },
+    { x: -hw, y: hh }, { x: hw, y: hh },
+  ];
+  for (const c of corners) {
+    const o = rot(c, v.angle);
+    if (v.y + o.y > heightAt(v.x + o.x)) {
+      if (c.y < 0) roofHit = true; else bodyHit = true;
+    }
+  }
+  if (bodyHit) v.y -= 0.6;
+  if (roofHit) {
+    v.crashTimer += dt;
+    if (v.crashTimer > 0.4 && !v.crashed) {
+      v.crashed = true;
+      ev.crashed = true;
+    }
+  } else v.crashTimer = Math.max(0, v.crashTimer - dt);
+  return ev;
+}
