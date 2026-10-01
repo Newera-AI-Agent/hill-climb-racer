@@ -98,3 +98,16 @@ export interface StepEvents {
   airtimeLanded: number;
   crashed: boolean;
 }
+
+function wrapPi(a: number): number {
+
+function wrapPi(a: number) {
+  const t = Math.PI * 2;
+  return ((a % t) + t + Math.PI) % t - Math.PI;
+}
+
+export function stepVehicle(
+  v: VehicleState,
+  input: InputState,
+  dt: number
+): StepEvents {
