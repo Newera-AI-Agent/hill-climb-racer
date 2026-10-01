@@ -33,3 +33,9 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-10-01T12:43:18.715Z | VM 1/3] sub-agent game-engine finished (304s): ### game-engine FAILED (protocol violations x3).
 - [2026-10-01T12:43:20.836Z | VM 1/3] step 33 spawn_agents ok [tools so far: 25]: SUB-AGENTS REPORT: ### game-engine FAILED (protocol violations x3). ### game-ui FAILED (protocol violations x3). Each agent summary above is authoritative for its slice. Verify their claims with yo
 - [2026-10-01T12:43:29.771Z | VM 1/3] step 34 shell ok [tools so far: 26]: 102:const wrapPi = (a:…(787 chars) 104:function wrapPi(a: number): number { …(555 chars)
+- [2026-10-01T12:43:51.233Z | VM 1/3] step 36 shell ok [tools so far: 27]: 0   airtimeLanded: number;   crashed: boolean; }
+- [2026-10-01T12:44:07.041Z | VM 1/3] step 38 append_file ok [tools so far: 28]: appended 1 lines to lib/game/vehicle.ts (now 101 lines, 2385 chars)
+- [2026-10-01T12:44:24.574Z | VM 1/3] step 39 append_file ok [tools so far: 29]: appended 1 lines to lib/game/vehicle.ts (now 102 lines, 2397 chars)
+- [2026-10-01T12:44:33.556Z | VM 1/3] step 40 append_file ok [tools so far: 30]: appended 1 lines to lib/game/vehicle.ts (now 103 lines, 2409 chars)
+- [2026-10-01T12:44:42.398Z | VM 1/3] step 41 shell ok [tools so far: 31]: airtimeLanded: number;   crashed: boolean; } …(60 chars) …(36 chars) …(68 chars)
+- [2026-10-01T12:44:50.144Z | VM 1/3] step 42 shell ok [tools so far: 32]: crashed: boolean; }

@@ -98,7 +98,3 @@ export interface StepEvents {
   airtimeLanded: number;
   crashed: boolean;
 }
-
-const wrapPi = (a:…(787 chars)
-
-function wrapPi(a: number): number { …(555 chars)
