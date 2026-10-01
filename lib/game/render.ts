@@ -169,3 +169,15 @@ export function renderScene(
   ctx.stroke();
   wheel(-18, v.wheelSpin);
   wheel(18, v.wheelSpin);
+  ctx.fillStyle = coll[0];
+  ctx.strokeStyle = coll[1];
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.roundRect(-26, -22, 52, 20, 6);
+  ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#bee3f8';
+  ctx.fillRect(-8, -32, 18, 11);
+  ctx.fillStyle = '#f4a261';
+  ctx.beginPath(); ctx.arc(-11, -26, 6, 0, 7); ctx.fill();
+  ctx.restore();
+}
